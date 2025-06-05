@@ -20,7 +20,7 @@
   </div>
 
   <div align="center">
-    🌐 <strong>Live Demo</strong>: <a href="https://your-live-demo-link.com">CineScope</a>
+    🌐 <strong>Live Demo</strong>: <a href="https://karthickramalagar.github.io/CineScope/">CineScope</a>
   </div>
 </div>
 
