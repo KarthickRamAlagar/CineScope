@@ -44,6 +44,10 @@ CineScope is a modern movie website developed using React.js, Tailwind CSS, and 
 - **Vite**: Lightning-fast build tool for modern web projects.  
 - **React.js**: Component-based library for building user interfaces.  
 - **Tailwind CSS**: Utility-first CSS framework for rapid UI development.  
+- **TypeScript**: Strongly typed programming language for scalable and maintainable code.  
+- **Framer Motion**: Animation library for React to create smooth and interactive animations.  
+- **GSAP (GreenSock Animation Platform)**: Powerful JavaScript library for creating high-performance animations.  
+- **React Bits**: Collection of reusable React components and utilities.  
 
 ---
 
