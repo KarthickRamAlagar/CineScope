@@ -6,6 +6,10 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react(),
-  tailwindcss()],
-  base: "CineScope",
+    tailwindcss()
+  ],
+  base: "/CineScope/", // Matches your repository name
+  build: {
+    outDir: "dist", // Ensure the output directory is correct
+  },
 })
