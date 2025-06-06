@@ -1,17 +1,15 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Hyperspeed from '../components/Hyperspeed';
-import BlurText from '../components/BlurText';
 
 const HomePage = () => {
   const [showBlurText, setShowBlurText] = useState(false);
   const navigate = useNavigate();
-  const audioRef = useRef<HTMLAudioElement>(null); // Reference for the audio element
-
+  const audioRef = useRef<HTMLAudioElement>(null); 
   useEffect(() => {
     // Start Hyperspeed and audio playback
     if (!showBlurText && audioRef.current) {
-      audioRef.current.muted = false; // Unmute the audio
+      audioRef.current.muted = false; 
       audioRef.current.play().catch((error) => console.error("Audio playback failed:", error));
     }
 
@@ -19,10 +17,11 @@ const HomePage = () => {
     const timer = setTimeout(() => {
       setShowBlurText(true);
       if (audioRef.current) {
-        audioRef.current.pause(); // Stop audio
-        audioRef.current.currentTime = 0; // Reset audio playback
+        audioRef.current.pause(); 
+        audioRef.current.currentTime = 0; 
       }
     }, 5500);
+    console.log(audioRef.current);
 
     return () => clearTimeout(timer);
   }, [showBlurText]);
@@ -94,14 +93,16 @@ const HomePage = () => {
       )}
       {showBlurText && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <BlurText
-            text="Welcome to CineScope!"
-            delay={150}
-            animateBy="words"
-            direction="top"
-            onAnimationComplete={() => console.log('BlurText animation completed!')}
-            className="text-white text-6xl font-extrabold text-center"
-          />
+          <div className="flex flex-col items-center space-y-4">
+            {/* Logo */}
+            <div className="w-20 h-20 bg-indigo-800 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-4xl">CS</span>
+            </div>
+            {/* App Name */}
+            <span className="text-white text-6xl font-extrabold text-center">
+              CINESCOPE
+            </span>
+          </div>
         </div>
       )}
     </div>
